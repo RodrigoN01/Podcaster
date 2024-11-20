@@ -13,3 +13,11 @@ export const fetchPodcastDetails = async (podcastId) => {
   const data = await response.json();
   return data.results[0];
 };
+
+export const fetchPodcastTracks = async (podcastId) => {
+  const response = await fetch(
+    `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/lookup?id=${podcastId}&media=podcast&entity=podcastEpisode&limit=100`
+  );
+  const data = await response.json();
+  return data.results;
+};
