@@ -1,0 +1,35 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  &__loading {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    &__count {
+      font-size: 16px;
+      border-radius: 160px;
+      padding: 5px 10px;
+      background-color: var(--primary-color);
+      color: white;
+    }
+  }
+
+  &__podcasts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
