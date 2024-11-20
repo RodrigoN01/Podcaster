@@ -10,7 +10,6 @@ export const usePodcastDetails = (podcastId) => {
     const loadPodcast = async () => {
       try {
         const data = await fetchPodcastDetails(podcastId);
-        console.log("here", data);
         setPodcastDetails(data);
       } catch (err) {
         setError(err);
