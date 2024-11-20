@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { fetchPodcastDetails } from "../utils/fetchData";
+import { fetchPodcastTracks } from "../utils/fetchData";
 
 export const usePodcastDetails = (podcastId) => {
-  const [podcastDetails, setPodcastDetails] = useState(null);
+  const [podcastTracks, setPodcastTracks] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadPodcast = async () => {
       try {
-        const data = await fetchPodcastDetails(podcastId);
-        setPodcastDetails(data);
+        const data = await fetchPodcastTracks(podcastId);
+        setPodcastTracks(data);
       } catch (err) {
         console.error(err);
       } finally {
@@ -20,5 +20,5 @@ export const usePodcastDetails = (podcastId) => {
     loadPodcast();
   }, [podcastId]);
 
-  return { podcastDetails, loading };
+  return { podcastTracks, loading };
 };

@@ -4,7 +4,6 @@ import { fetchPodcasts } from "../utils/fetchData";
 export const usePodcasts = () => {
   const [podcasts, setPodcasts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const loadPodcasts = async () => {
@@ -12,7 +11,7 @@ export const usePodcasts = () => {
         const data = await fetchPodcasts();
         setPodcasts(data);
       } catch (err) {
-        setError(err);
+        console.error(err);
       } finally {
         setLoading(false);
       }
@@ -21,5 +20,5 @@ export const usePodcasts = () => {
     loadPodcasts();
   }, []);
 
-  return { podcasts, loading, error };
+  return { podcasts, loading };
 };
