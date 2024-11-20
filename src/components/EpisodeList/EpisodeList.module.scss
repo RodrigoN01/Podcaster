@@ -1,0 +1,36 @@
+.episodeList {
+  background: white;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  padding: 16px;
+
+  &__header {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__table {
+    width: 100%;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 16px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
