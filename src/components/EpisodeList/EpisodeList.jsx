@@ -24,7 +24,7 @@ const EpisodeList = ({ podcastId, tracks, loading }) => {
           </thead>
           <tbody>
             {tracks.map((episode) => (
-              <tr key={episode.id}>
+              <tr key={episode.trackId}>
                 <td>
                   <Link to={`/podcast/${podcastId}/episode/${episode.trackId}`}>
                     {episode.trackName}
