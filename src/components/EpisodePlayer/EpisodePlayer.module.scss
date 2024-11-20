@@ -1,0 +1,25 @@
+.episodePlayer {
+  background: white;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  padding: 30px;
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #444;
+  }
+
+  &__player {
+    width: 100%;
+  }
+
+  &__audio {
+    width: 100%;
+  }
+}
