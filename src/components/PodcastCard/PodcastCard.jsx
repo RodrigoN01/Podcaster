@@ -3,7 +3,10 @@ import styles from "./PodcastCard.module.scss";
 
 const PodcastCard = ({ podcast }) => {
   return (
-    <Link to={`/podcast/${podcast.id}`} className={styles.podcastCard}>
+    <Link
+      to={`/podcast/${podcast.id.attributes["im:id"]}`}
+      className={styles.podcastCard}
+    >
       <div className={styles.podcastCard__imageContainer}>
         <img
           src={podcast["im:image"][2].label}
