@@ -8,7 +8,7 @@ export const fetchPodcasts = async () => {
 
 export const fetchPodcastDetails = async (podcastId) => {
   const response = await fetch(
-    `https://itunes.apple.com/lookup?id=${podcastId}`
+    `https://cors-anywhere.herokuapp.com/https://itunes.apple.com/lookup?id=${podcastId}`
   );
   const data = await response.json();
   return data.results[0];
