@@ -5,6 +5,8 @@ import styles from "./EpisodeList.module.scss";
 import Spinner from "../Spinner/Spinner";
 
 const EpisodeList = ({ podcastId, tracks, loading }) => {
+  if (!tracks) return null;
+
   if (loading) return <Spinner />;
 
   return (
