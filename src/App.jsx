@@ -7,19 +7,15 @@ import PodcastDetail from "./Pages/PodcastDetail";
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='app'>
-        <Header />
-        <main className='app__content'>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/podcast/:podcastId' element={<PodcastDetail />} />
-            <Route
-              path='/podcast/:podcastId/episode/:episodeId'
-              element={<EpisodeDetail />}
-            />
-          </Routes>
-        </main>
-      </div>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/podcast/:podcastId' element={<PodcastDetail />} />
+        <Route
+          path='/podcast/:podcastId/episode/:episodeId'
+          element={<EpisodeDetail />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 };
