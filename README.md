@@ -9,7 +9,6 @@ A React-based podcast application that allows users to browse and listen to the 
 - View podcast details and episodes
 - Listen to episodes with a built-in audio player
 - Responsive design
-- Performance optimized with useDeferredValue for search
 
 ## Getting Started
 
