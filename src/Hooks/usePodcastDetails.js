@@ -6,8 +6,6 @@ export const usePodcastDetails = (podcastId) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("here1", podcastId);
-
   useEffect(() => {
     const loadPodcast = async () => {
       try {
