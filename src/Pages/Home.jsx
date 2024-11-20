@@ -3,6 +3,7 @@ import PodcastCard from "../components/PodcastCard/PodcastCard";
 import { usePodcasts } from "../Hooks/usePodcasts";
 import styles from "./Home.module.scss";
 import SearchBar from "../components/SearchBar/SearchaBar";
+import Spinner from "../components/Spinner/Spinner";
 
 const Home = () => {
   const { podcasts, loading } = usePodcasts();
@@ -22,7 +23,7 @@ const Home = () => {
       </div>
 
       {loading ? (
-        <div className={styles.home__loading}>Loading...</div>
+        <Spinner />
       ) : (
         <div className={styles.home__podcasts}>
           {filteredPodcasts.map((podcast) => (
