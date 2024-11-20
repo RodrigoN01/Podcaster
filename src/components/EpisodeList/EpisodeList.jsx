@@ -23,7 +23,7 @@ const EpisodeList = ({ podcastId, tracks, loading }) => {
             </tr>
           </thead>
           <tbody>
-            {tracks.map((episode) => (
+            {tracks.slice(1).map((episode) => (
               <tr key={episode.trackId}>
                 <td>
                   <Link to={`/podcast/${podcastId}/episode/${episode.trackId}`}>
