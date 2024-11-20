@@ -8,7 +8,7 @@ import Spinner from "../components/Spinner/Spinner";
 const PodcastDetail = () => {
   const { podcastId } = useParams();
   const { podcastDetails, loading } = usePodcastDetails(podcastId);
-  const { tracks, isLoading } = usePodcastTracks(podcastId);
+  const { podcastTracks, isLoading } = usePodcastTracks(podcastId);
 
   if (loading) return <Spinner />;
 
@@ -36,7 +36,7 @@ const PodcastDetail = () => {
       <section>
         <EpisodeList
           podcastId={podcastId}
-          tracks={tracks}
+          tracks={podcastTracks}
           loading={isLoading}
         />
       </section>
