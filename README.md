@@ -51,12 +51,6 @@ To build the app for production:
 npm run build
 ```
 
-To serve the production build:
-
-```bash
-npm run serve
-```
-
 ## Project Structure
 
 The project follows a modular architecture with:
