@@ -1,0 +1,15 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 20px 40px;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+}
