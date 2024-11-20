@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchPodcastTracks } from "../utils/fetchData";
 
-export const usePodcastDetails = (podcastId) => {
+export const usePodcastTracks = (podcastId) => {
   const [podcastTracks, setPodcastTracks] = useState(null);
   const [loading, setLoading] = useState(true);
 
