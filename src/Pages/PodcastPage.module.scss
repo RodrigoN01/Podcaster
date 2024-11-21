@@ -10,6 +10,11 @@
     position: sticky;
     top: calc(60px + 20px); // Header height + padding
     height: fit-content;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   &__card {

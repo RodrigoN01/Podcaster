@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { usePodcastDetails } from "../Hooks/usePodcastDetails";
 import styles from "./PodcastPage.module.scss";
 import Spinner from "../components/Spinner/Spinner";
@@ -13,14 +13,16 @@ const PodcastPage = ({ children }) => {
     <div className={styles.podcastPage}>
       <aside className={styles.podcastPage__sidebar}>
         <div className={styles.podcastPage__card}>
-          <img
-            src={podcastDetails.artworkUrl600}
-            alt='Podcast artwork'
-            className={styles.podcastPage__image}
-          />
-          <h2 className={styles.podcastPage__title}>
-            {podcastDetails.collectionName}
-          </h2>
+          <Link to={`/podcast/${podcastId}`}>
+            <img
+              src={podcastDetails.artworkUrl600}
+              alt='Podcast artwork'
+              className={styles.podcastPage__image}
+            />
+            <h2 className={styles.podcastPage__title}>
+              {podcastDetails.collectionName}
+            </h2>
+          </Link>
           <p className={styles.podcastPage__author}>
             by {podcastDetails.artistName}
           </p>
