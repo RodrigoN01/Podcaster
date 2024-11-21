@@ -7,7 +7,7 @@ export const formatDate = (dateString) => {
     year: "numeric",
   };
 
-  const formattedDate = date.toLocaleDateString("en-US", options);
+  const formattedDate = date.toLocaleDateString("en-UK", options);
 
   return formattedDate.replace(/\//g, "-").replace(/-/g, "/");
 };
