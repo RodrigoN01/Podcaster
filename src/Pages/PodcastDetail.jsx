@@ -6,17 +6,19 @@ import PodcastPage from "./PodcastPage";
 
 const PodcastDetail = () => {
   const { podcastId } = useParams();
-  const { podcastTracks, isLoading } = usePodcastTracks(podcastId);
-
-  if (isLoading) return <Spinner />;
+  const { podcastTracks, loading } = usePodcastTracks(podcastId);
 
   return (
     <PodcastPage>
-      <EpisodeList
-        podcastId={podcastId}
-        tracks={podcastTracks}
-        loading={isLoading}
-      />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <EpisodeList
+          podcastId={podcastId}
+          tracks={podcastTracks}
+          loading={loading}
+        />
+      )}
     </PodcastPage>
   );
 };
